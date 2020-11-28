@@ -1,0 +1,136 @@
+<div class="root">
+  <header class="header">
+
+    <i (click)="showMenu();" class="fas fa-bars bars"></i>
+
+    <aside class="nav-burguer" id="nav-burguer">
+      <nav>
+        <ol class="nav-ol">
+          <li><a class="link" href="#about">About</a></li>
+          <li><a class="link" href="#experience">Experience</a></li>
+          <li><a class="link" href="#contact">Contact</a></li>
+        </ol>
+
+      </nav>
+      <a class="burguer-resume link" id="resumeWeb" download="resume.pdf" target="_blank" href="../assets/resume.pdf">
+        Resume</a>
+    </aside>
+    <img src="../assets/my-logo.png" class="logoAS" />
+    <nav class="nav">
+      <div class="nav-content">
+        <!-- <a class="logoAS">AS</a> -->
+        <ol class="nav-ol">
+          <li>
+            <a class="link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="link" href="#experience">Experience</a>
+          </li>
+          <li>
+            <a class="link" href="#contact">Contact</a>
+          </li>
+          <li>
+
+          </li>
+        </ol>
+      </div>
+
+    </nav>
+  </header>
+
+  <div class="left-sidebar">
+    <div class="icons">
+      <a target="_blank link" href="https://github.com/jd">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="icons">
+      <a target="_blank link" href="https://www.linkedin.com/in/jd/">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+
+
+
+  <section class="content" id="content">
+    <div class="firstSection">
+      <h1 class="txt-h1">
+        Hi, my name is
+      </h1>
+
+      <h2 class="txt-h2">
+        Jhon Doe.
+
+      </h2>
+      <h3 class="txt-h3">
+        I'm a <span class="keyword">Software Developer</span>.
+      </h3>
+
+      <p>
+        I specialize in <span class="keyword">Hybrid Mobile App Development</span> and Web Apps.
+      </p>
+
+      <a href="mailto:jhon@gmail.com" target="_blank" rel="nofollow noopener noreferrer"
+        class="contact-btn button1">Get In Touch!</a>
+      <img class="webs-img" src="../assets/hybrid.png" />
+    </div>
+
+    <section id="about">
+      <div class="firstSection">
+        <h2> About </h2>
+        <p>
+          Hi, my name is Jhon and I'm a <span class="keyword">Software Developer</span>.
+        </p>
+        <p>
+          I enjoy creating responsive websites and mobile applications.
+        </p>
+        <p>
+          I studied Computer Science Enginnering in the <a class="keyword-link"
+            href="https://www.ips.pt/ips_si/web_base.gera_pagina?P_pagina=29906" target="_blank">Polytechnic Institute
+            of Setúbal.</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="firstSection">
+        <h2> Experience </h2>
+        <h3 class="Heading-sc-3p94va-0 fGYjRx">Where I've Worked</h3>
+
+        <ul class="jobs">
+          <li *ngFor="let job of jobs" class="job-li" [class.selected]="job === selectedJob" (click)="onSelect(job)">
+            {{job.companyname}}
+          </li>
+        </ul>
+
+        <app-job-detail [job]="selectedJob"></app-job-detail>
+      </div>
+    </section>
+
+    <section class="push" id="contact">
+      <div class="firstSection">
+        <h2>Contact</h2>
+        <p>Feel free to reach out!</p>
+        <a class="burguer-resume link button1" id="resumeMobile" download="resume.pdf" target="_blank"
+          href="../assets/resume.pdf">
+          Download Resume</a>
+        <a href="mailto:jhon@gmail.com" target="_blank" rel="nofollow noopener noreferrer"
+          class="contact-btn button1">Say
+          Hello!</a>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="signature">Designed &amp; Built by Jhon Doe</div>
+    </footer>
+
+  </section>
+
+  <div class="right-sidebar" id="email">
+    jhondoe@gmail.com
+  </div>
+</div>
+
+<router-outlet></router-outlet>
