@@ -1,0 +1,14 @@
+<div *ngIf="proj">
+    <a class="link link-no-margin" href="{{proj.url}}"> 
+        <h2>{{proj.name | uppercase}}</h2>
+        </a>
+    <div class="job-desc">
+        <span class="job-position"></span>
+        <div class="job-text">
+        </div>
+    </div>
+    {{proj.tech}}, you can see it <a class="link link-no-margin" href="{{proj.url}}">live!</a>
+
+    <p>Check the code on
+        <a class="link link-no-margin" href="{{proj.git}}">github!</a>
+    </p>

@@ -1,0 +1,14 @@
+<section id="projects">
+    <div class="firstSection card">
+        <h2> Projects </h2>
+        <h3 class="Heading-sc-3p94va-0 fGYjRx">My personal projects</h3>
+        <ul class="jobs">
+            <a href="https://anyProject-d9433.web.app/">
+            <li *ngFor="let proj of projects" class="job-li linkProj" [class.selected]="proj === selectedProj" (click)="onSelect(proj)">
+                <a href="{{proj.url}}"> {{proj.name}} </a>
+            </li>
+        </a>
+        </ul>
+        <app-proj-detail [proj]="selectedProj"></app-proj-detail>
+    </div>
+</section>

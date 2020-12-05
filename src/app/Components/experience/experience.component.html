@@ -1,0 +1,14 @@
+<section id="experience">
+    <div class="firstSection card">
+        <h2> Experience </h2>
+        <h3 class="Heading-sc-3p94va-0 fGYjRx">Where I've Worked</h3>
+
+        <ul class="jobs">
+            <li *ngFor="let job of jobs" class="job-li" [class.selected]="job === selectedJob" (click)="onSelect(job)">
+                {{job.companyname}}
+            </li>
+        </ul>
+
+        <app-job-detail [job]="selectedJob"></app-job-detail>
+    </div>
+</section>
